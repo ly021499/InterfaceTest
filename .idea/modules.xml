@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://F:/project/PlatformAutoTest/.idea/PlatformAutoTest.iml" filepath="F:/project/PlatformAutoTest/.idea/PlatformAutoTest.iml" />
+      <module fileurl="file://$USER_HOME$/PycharmProjects/autoTest/.idea/autoTest.iml" filepath="$USER_HOME$/PycharmProjects/autoTest/.idea/autoTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/interfaceTest.iml" filepath="$PROJECT_DIR$/.idea/interfaceTest.iml" />
+    </modules>
+  </component>
+</project>
