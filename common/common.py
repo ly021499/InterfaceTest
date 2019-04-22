@@ -73,17 +73,17 @@ def get_xls(xls_name, sheet_name):
     :return:
     """
     cls = []
-    # get xls file's path 获得xls文件的路径
+    # 获得xls文件的路径
     xlsPath = os.path.join(proDir, "testFile", 'case', xls_name)
-    # open xls file 打开xls文件（直接从xlrd类中导入了open_workbook方法）
+    # 打开xls文件（直接从xlrd类中导入了open_workbook方法）
     file = open_workbook(xlsPath)
-    # get sheet by name 获取xls文件中 的表名
+    # 获取xls文件中 的表名
     sheet = file.sheet_by_name(sheet_name)
-    # get one sheet's rows 获取对应表名中的有效行数
+    # 获取对应表名中的有效行数
     nrows = sheet.nrows
     # 遍历所有行数取得单行的列表对象
     for i in range(nrows):
-        # 判断sheets中的第一行不是 case_name 字符串的就添加到cls[]列表中
+        # 判断sheets中的第一行不是 case_name 的字符串就添加到cls[]列表中
         if sheet.row_values(i)[0] != u'case_name':
             cls.append(sheet.row_values(i))
     return cls

@@ -26,7 +26,7 @@ class Email:
         title = localReadConfig.get_email("subject")
         # content = localReadConfig.get_email("content")
 
-        # 读取config.ini中的receiver并用.split切割成多个对象存入self.receiver[]列表中
+        # 读取config.ini中的receiver并调用.split切割成多个对象存入self.receiver[]列表中
         # get receiver list
         self.value = localReadConfig.get_email("receiver")
         self.receiver = []
@@ -145,6 +145,7 @@ class Email:
         try:
             smtp = smtplib.SMTP()
             smtp.connect(host)
+            # sender和user必须相等，否则报错501：mail from address must be same as authorization user
             smtp.login(user, password)
             smtp.sendmail(sender, self.receiver, self.msg.as_string())
             smtp.quit()
